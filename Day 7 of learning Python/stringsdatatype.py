@@ -104,3 +104,6 @@ print(message)
 # SyntaxError: unterminated string literal (detected at line 103)
 '''message = 'One of Python's strengths is its diverse community.'
 print(message)'''
+
+# ----------------------------------------------------------------------------------------------------
+
