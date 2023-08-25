@@ -180,3 +180,31 @@ print(cars)
 
 # Finding the Length of a List---------------------------------------------------------------
 print(len(cars))
+
+#--------------------------------------------------------------------------------------------
+# for loop to print out each name in a list of magicians
+magicians = ['alice', 'david', 'carolina']
+for magician in magicians:
+    print(magician)
+    print(f"{magician.title()}, that was a great trick!")
+    print(f"I can't wait to see your next trick, {magician.title()}.\n")
+# thank you message after the for loop, without indentation
+print("Thank you, everyone. That was a great magic show!")
+
+
+#-----------------------------------------------------------------------------------------------
+# Using the range() Function
+'''Python’s range() function makes it easy to generate a series of numbers'''
+
+for value in range(1, 5):
+   print(value)
+
+for value in range(6):
+   print(value)
+
+#----------------------------------------------------------------------------------------------
+# Using range() to Make a List of Numbers
+'''If you want to make a list of numbers, you can convert the results of range()
+directly into a list using the list() function'''
+numbers = list(range(1, 6))
+print(numbers)
