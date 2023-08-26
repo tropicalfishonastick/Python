@@ -208,3 +208,28 @@ for value in range(6):
 directly into a list using the list() function'''
 numbers = list(range(1, 6))
 print(numbers)
+
+# the range() function starts with the value 2 and then adds 2 to that value
+even_numbers = list(range(2, 11, 2))
+print(even_numbers)
+
+
+squares = [] #empty list called squares
+for value in range(1, 11): #Python to loop through each value from 1 to 10 using the range() function
+  square = value ** 2 #Inside the loop,the current value is raised to the second power and assigned to the variable square
+  squares.append(square) #Each new value of square is then appended to the list squares
+print(squares) #when the loop has finished running, the list of squares is printed
+
+#To write this code more concisely------------------------
+squares = []
+for value in range(1,11):
+  squares.append(value**2)
+print(squares)
+
+
+
+# Simple Statistics with a List of Numbers----------------------------------------------------------------------
+digits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+print(min(digits))
+print(max(digits))
+print(sum(digits))
