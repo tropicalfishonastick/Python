@@ -257,6 +257,50 @@ print(players[-3:])
 
 # Looping Through a Slice----------------------------------------------------------------------------------------------
 
+'''You can use a slice in a for loop if you want to loop through a subset of the
+elements in a list. In the next example, we loop through the first three players
+and print their names as part of a simple roster'''
+
 print("Here are the first three players on my team:")
 for player in players[:3]:
    print(player.title())
+
+# Copying a List-----------------------------------------------------------------------------------------------------
+
+my_foods = ['pizza', 'falafel', 'carrot cake'] #make a list of the foods we like called my_foods
+friend_foods = my_foods[:] #make a new list called friend_foods , make a copy of my_foods by asking for a slice of my_foods without specifying any indices
+#assign the copy to friend_foods.
+#print each list
+print("My favorite foods are:")
+print(my_foods)
+print("\nMy friend's favorite foods are:")
+print(friend_foods)
+
+'''To prove that we actually have two separate lists, we’ll add a new food
+to each list and show that each list keeps track of the appropriate person’s
+favorite foods:'''
+
+my_foods.append('cannoli')
+friend_foods.append('ice cream')
+print("My favorite foods are:")
+print(my_foods)
+print("\nMy friend's favorite foods are:")
+print(friend_foods)
+
+'''here’s what happens when you try to copy a list without using a slice:'''
+'''Instead of assigning a copy of my_foods to friend_foods, we set friend_foods
+equal to my_foods. This syntax actually tells Python to associate the new variable
+friend_foods with the list that is already associated with my_foods, so now
+both variables point to the same list. As a result, when we add 'cannoli' to
+my_foods, it will also appear in friend_foods. Likewise 'ice cream' will appear
+in both lists, even though it appears to be added only to friend_foods.'''
+
+# This doesn't work:
+
+friend_foods = my_foods
+my_foods.append('cannoli')
+friend_foods.append('ice cream')
+print("My favorite foods are:")
+print(my_foods)
+print("\nMy friend's favorite foods are:")
+print(friend_foods)
