@@ -32,3 +32,24 @@ revised_menu = tuple(revised_menu)  # Convert the list back to a tuple
 print("\nRevised Menu:")
 for food in revised_menu:
     print(food)
+
+
+# another example
+guests = ['Alice', 'Bob', 'Carol']
+
+for guest in guests:
+    print("Hello, " + guest + "! You are invited to the dinner.")
+
+print(guests[1] + " can't make it to the dinner.")
+
+# Bob can't make it, so let's replace him with David
+guests[1] = 'David'
+
+for guest in guests:
+    print("Hello, " + guest + "! You are invited to the dinner.")
+
+
+# another example
+for number in range(1, 21):
+    print(number)
+
