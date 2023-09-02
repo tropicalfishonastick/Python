@@ -6,10 +6,11 @@ while current_number <= 5:
 
 '''--------------------------------------Letting the User Choose When to Quit---------------------------------------------'''
 
+# define a quit value and then keep the program running as long as the user has not entered the quit value:
 # define a prompt that tells the user their two options: entering a message or entering the quit value (in this case, 'quit').
 prompt = "\nTell me something, and I will repeat it back to you:"
 prompt += "\nEnter 'quit' to end the program. "
-message = "" # set up a variable message to keep track of whatever value the user enters. we set up a variable message to keep track of whatever value the user enters. We define message as an empty string, "", so Python has something to check the first time it reaches the while line
+message = "" # set up a variable message to keep track of whatever value the user enters. We define message as an empty string, "", so Python has something to check the first time it reaches the while line
 while message != 'quit':
    message = input(prompt)
    print(message)
@@ -23,3 +24,25 @@ message = input(prompt): Inside the loop, this line uses the input function to d
 print(message): After receiving the user's input, the program prints the value of the message variable, which is the user's input.
 The loop continues back to the while statement, where it checks if the value of message is still not equal to 'quit'. If it's not 'quit', the loop continues, and the program prompts the user for input again. If the user enters 'quit', the condition becomes False, and the loop exits.
 This program effectively creates an interactive conversation with the user. It continuously asks the user for input and echoes their input back to them until they decide to end the program by typing 'quit'.'''
+
+# This program works well, except that it prints the word 'quit' as if it were an actual message. A simple if test fixes this:
+prompt = "\nTell me something, and I will repeat it back to you:"
+prompt += "\nEnter 'quit' to end the program. "
+message = ""
+while message != 'quit':
+   message = input(prompt)
+   if message != 'quit':
+      print(message)
+
+
+'''----------------------------------Using a Flag---------------------------------------'''
+
+prompt = "\nTell me something, and I will repeat it back to you:"
+prompt += "\nEnter 'quit' to end the program. "
+active = True
+while active:
+   message = input(prompt)
+   if message == 'quit':
+      active = False
+   else:
+      print(message)
