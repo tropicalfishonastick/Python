@@ -46,3 +46,44 @@ while active:
       active = False
    else:
       print(message)
+
+'''------------------------------------------------Using break to Exit a Loop-------------------------------------------------------'''
+
+# consider a program that asks the user about places they’ve visited. We can stop the while loop in this program by calling break as soon as the user enters the 'quit' value:
+prompt = "\nPlease enter the name of a city you have visited:"
+prompt += "\n(Enter 'quit' when you are finished.) "
+while True:
+   city = input(prompt)
+   if city == 'quit':
+      break
+   else:
+      print(f"I'd love to go to {city.title()}!")
+
+'''---------------------------------------------------Using continue in a Loop-------------------------------------------------------'''
+
+# consider a loop that counts from 1 to 10 but prints only the odd numbers in that range:
+current_number = 0 # set current_number to 0.
+
+# Because it’s less than 10, Python enters the while loop
+while current_number < 10:
+   current_number += 1 # increment the count by 1
+   if current_number % 2 == 0: # if statement then checks the modulo of current_number and 2
+     continue # If the modulo is 0 (which means current_number is divisible by 2), the continue statement tells Python to ignore the rest of the loop and return to the beginning
+   print(current_number) # If the current number is not divisible by 2, the rest of the loop is executed and Python prints the current number
+
+
+'''-----------------------------------------------Avoiding Infinite Loops---------------------------------------------------------------'''
+
+x = 1
+while x <= 5:
+  print(x)
+  x += 1
+
+# if you accidentally omit the line x += 1, the loop will run forever:
+# This loop runs forever!
+'''
+x = 1
+while x <= 5:
+   print(x)
+   
+'''
