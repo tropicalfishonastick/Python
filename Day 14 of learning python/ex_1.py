@@ -43,3 +43,33 @@ restaurant.increment_number_served(10)
 
 # Print the incremented number of customers served (60)
 print(f"Incremented number of customers served: {restaurant.number_served}")
+
+
+
+'''Ice Cream Stand: An ice cream stand is a specific kind of restaurant. Write
+a class called IceCreamStand that inherits from the Restaurant class. Either version of the class
+will work; just pick the one you like better. Add an attribute called flavors that
+stores a list of ice cream flavors. Write a method that displays these flavors.
+Create an instance of IceCreamStand, and call this method.'''
+
+class IceCreamStand(Restaurant):
+    def __init__(self, restaurant_name, flavors):
+        # Call the constructor of the parent class (Restaurant)
+        super().__init__(restaurant_name, cuisine_type="Ice Cream")
+        self.flavors = flavors
+
+    def display_flavors(self):
+        # Print the available ice cream flavors
+        print("Available Ice Cream Flavors:")
+        for flavor in self.flavors:
+            print(f"- {flavor}")
+
+# Create an instance of the IceCreamStand class
+ice_cream_stand = IceCreamStand("Sweet Treats", ["Vanilla", "Chocolate", "Strawberry", "Mint Chip"])
+
+# Call the display_flavors method to display the ice cream flavors
+ice_cream_stand.display_flavors()
+
+
+
+

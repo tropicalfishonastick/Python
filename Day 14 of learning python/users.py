@@ -37,3 +37,43 @@ user2.greet_user()
 
 user3.describe_user()
 user3.greet_user()
+
+
+
+'''Admin: An administrator is a special kind of user. Write a class called
+Admin that inherits from the User class. Add an attribute, privileges, that stores a list of
+strings like "can add post", "can delete post", "can ban user", and so on.
+Write a method called show_privileges() that lists the administrator’s set of
+privileges. Create an instance of Admin, and call your method. Privileges: Write a separate Privileges class. The class should have one
+attribute, privileges, that stores a list of strings as described above.
+Move the show_privileges() method to this class. Make a Privileges instance
+as an attribute in the Admin class. Create a new instance of Admin and use your
+method to show its privileges.'''
+
+# Define the User class as you provided it
+
+# Define the Privileges class to store a list of privileges
+class Privileges:
+    def __init__(self, privileges=[]):
+        self.privileges = privileges
+
+    def show_privileges(self):
+        print("Privileges:")
+        for privilege in self.privileges:
+            print(f"- {privilege}")
+
+# Define the Admin class that inherits from the User class
+class Admin(User):
+    def __init__(self, first_name, last_name, age, email):
+        super().__init__(first_name, last_name, age, email)
+        # Create an instance of Privileges as an attribute in Admin
+        self.privileges = Privileges()
+
+# Create an instance of Admin
+admin_user = Admin("Admin", "User", 35, "admin@example.com")
+
+# Add privileges to the admin_user's Privileges instance
+admin_user.privileges.privileges = ["can add post", "can delete post", "can ban user"]
+
+# Call the show_privileges method to display the admin_user's privileges
+admin_user.privileges.show_privileges()
