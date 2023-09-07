@@ -1,0 +1,6 @@
+ERROR:root:Error: invalid mode: 'xyz'
+Traceback (most recent call last):
+  File "c:\Users\Ayushi Tripathi\OneDrive\Documents\Github\Python\Day 16 of learning python - Exceptions\logging_debugging.py", line 11, in <module>
+    with open("invalid_mode.txt", "xyz") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid mode: 'xyz'
